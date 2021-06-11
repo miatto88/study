@@ -9,14 +9,14 @@
 // //77
 // 例外が発生するしないに限らず、「例外処理を終了します」と出力するように実装してください。(finallyを利用して
 
-$randNum = rand( 1, 10 );
+$randNum = rand(1, 10);
 
 try {
-    echo $randNum . PHP_EOL;
-    if ( $randNum % 2 === 1 ) {
-        throw new Exception( "奇数です" );
+    // echo $randNum . PHP_EOL;
+    if ($randNum % 2 === 1) {
+        throw new Exception("奇数です");
     }
-} catch ( Exception $e ) {
+} catch (Exception $e) {
     echo $e->getMessage() . PHP_EOL;
 } finally {
     echo "例外処理を終了します" . PHP_EOL;
@@ -30,10 +30,10 @@ class newException extends Exception {
 }
 
 try {
-    if ( true ) {
-        throw new newException( "例外です" );
+    if (is_int($randNum)) {
+        throw new newException("例外です");
     }
-} catch ( newException $e ) {
+} catch (newException $e) {
     echo $e->getMessage() . PHP_EOL;
 } finally {
     echo "例外処理を終了します" . PHP_EOL;
@@ -48,5 +48,15 @@ try {
 // ex) ENV=stg php index.php
 // #出力
 // stg
+
+
+// コマンドライン上で以下を実行
+//set ENV=stg & php index.php
+
+// php上でENVを設定する場合
+putenv("ENV=stg");
+
+$env = getenv("ENV");
+echo $env;
 
 ?>
