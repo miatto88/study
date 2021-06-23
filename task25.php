@@ -15,10 +15,6 @@
 // id
 // 商品名
 // JANコード
-Class extends AnotherClass implements Interface
-{
-    
-}
 
 
 // 2, 商品マスター登録
