@@ -41,7 +41,8 @@ class Start {
     const SHOW = "1";
     const REGIST = "2";
     const DELETE = "3";
-    const CSV = "4";
+    const EXPORT = "4";
+
     const END = "5";
 
     const CHOICE = "1:商品一覧  2:商品登録  3:商品削除  4:CSV出力　5:終了" . PHP_EOL;
